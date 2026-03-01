@@ -1,7 +1,9 @@
 from aiogram import Router, types
+from aiogram import Router, types
+from aiogram.filters import Command
 
 router = Router()
 
-@router.message(commands=["start"])
-async def cmd_start(message: types.Message):
-    await message.answer("Hello!")
+@router.message(Command("start"))
+async def start_handler(message: types.Message):
+    await message.answer("Bot is working 🚀")
