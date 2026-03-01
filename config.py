@@ -7,7 +7,7 @@ Set BOT_TOKEN via environment variable or replace the placeholder:
 import os
 
 # ─── Bot ──────────────────────────────────────────────────────────────────────
-BOT_TOKEN = "8716343676:AAEs3Zxj5RTAGuvLl3jmfr860ZCztTb6W0E"
+BOT_TOKEN: str = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 
 # ─── Database ─────────────────────────────────────────────────────────────────
 DB_PATH: str = os.path.join(os.path.dirname(__file__), "wordbot.db")
